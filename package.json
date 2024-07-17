@@ -25,6 +25,7 @@
     "Other"
   ],
   "main": "./extension.js",
+  "activationEvents": ["onCommand:extension.openTwitchChat"],
   "contributes": {
     "configuration": {
       "title": "Better Twitch Chat Viewer",
