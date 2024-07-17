@@ -44,4 +44,4 @@ Initial release of VS Code Twitch Chat Viewer
 
 Subscribe to bryanthaboi https://youtube.com/@bryanthaboi
 
-Join the discord to reccomend new chat commands https://bois.icu
+Join the discord to recommendnew chat commands https://bois.icu
