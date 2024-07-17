@@ -1,0 +1,66 @@
+{
+  "name": "better-twitch-chat",
+  "displayName": "Better Twitch Chat Viewer",
+  "description": "Twitch Chat Viewer for Visual Studio Code",
+  "version": "0.0.1",
+  "publisher": "boisclub",
+  "author": {
+    "name": "bryanthaboi",
+    "email": "bryanthaboi@theboisclub.com",
+    "url": "https://bois.icu"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "keywords": ["twitch", "chat", "stream", "viewer"],
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openTwitchChat"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Better Twitch Chat Viewer",
+      "properties": {
+        "better-twitch-chat.username": {
+          "type": "string",
+          "default": "bryanthaboi",
+          "description": "Type in the username of the twitch chat you want to connect to."
+        }
+      }},
+    "commands": [
+      {
+        "command": "extension.openTwitchChat",
+        "title": "Open Twitch Chat"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.91.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "vscode": "^1.1.37",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  },
+  "extensionDependencies": [
+    "iliazeus.vscode-ansi"
+  ]
+}
