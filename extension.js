@@ -5,7 +5,21 @@ const path = require('path');
 
 let chatDocument;
 let chatEditor;
-const chatFilePath = path.join(vscode.workspace.rootPath || '', 'twitch-chat.ans');
+let pathX;
+let workspace = vscode.workspace;
+if (!workspace.workspaceFolders) {
+	pathX = workspace.rootPath;
+} else {
+	let root;
+	if (workspace.workspaceFolders.length === 1) {
+		root = workspace.workspaceFolders[0];
+	} else {
+		root = workspace.getWorkspaceFolder(resource);
+	}
+
+	pathX = root.uri.fsPath;
+}
+const chatFilePath = path.join(pathX || '', 'twitch-chat.ans');
 const MAX_LINES = 20;
 const config = vscode.workspace.getConfiguration('better-twitch-chat');
 const channelName = config.get('username');

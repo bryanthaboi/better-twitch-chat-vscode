@@ -24,9 +24,6 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:extension.openTwitchChat"
-  ],
   "main": "./extension.js",
   "contributes": {
     "configuration": {
