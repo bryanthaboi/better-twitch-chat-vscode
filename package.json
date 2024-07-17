@@ -2,6 +2,9 @@
   "name": "better-twitch-chat",
   "displayName": "Better Twitch Chat Viewer",
   "description": "Twitch Chat Viewer for Visual Studio Code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bryanthaboi/better-twitch-chat-vscode"},
   "version": "0.0.1",
   "publisher": "boisclub",
   "author": {
